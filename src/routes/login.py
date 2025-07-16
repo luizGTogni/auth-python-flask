@@ -14,6 +14,6 @@ def login():
 
         if user and bcrypt.check_password_hash(user.password, password_plain):
             login_user(user)
-            return jsonify({ "message": "Login Done" })
+            return jsonify({ "message": "Successfully logged in" })
 
     return jsonify({ "message": "Credentials Invalid" }), 401
