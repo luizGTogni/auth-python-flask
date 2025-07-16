@@ -1,5 +1,5 @@
 from src import db, app
-from src.models.user import User
+from src import models
 
 with app.app_context():
     db.drop_all()
