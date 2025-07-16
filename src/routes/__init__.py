@@ -1,1 +1,1 @@
-from src.routes import login, logout, create_user, update_user
+from src.routes import login, logout, create_user, update_user, read_user
