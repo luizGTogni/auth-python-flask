@@ -1,1 +1,1 @@
-from src.routes import login
+from src.routes import login, logout
