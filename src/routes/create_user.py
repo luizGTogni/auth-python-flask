@@ -12,7 +12,7 @@ def create_user():
 
         if not has_user:
             password_hashed = bcrypt.generate_password_hash(password).decode("utf-8")
-            user_created = models.user.User(username=username, password=password_hashed)
+            user_created = models.user.User(username=username, password=password_hashed, role="user")
 
             db.session.add(user_created)
             db.session.commit()
