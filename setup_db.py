@@ -4,7 +4,8 @@ from src import models
 with app.app_context():
     db.drop_all()
     db.create_all()
-    admin = models.user.User(username="admin", password=bcrypt.generate_password_hash("123456").decode("utf-8"))
+    password_hashed = bcrypt.generate_password_hash("123456").decode("utf-8")
+    admin = models.user.User(username="admin", password=password_hashed)
     db.session.add(admin)
     db.session.commit()
     print("Database created!")
